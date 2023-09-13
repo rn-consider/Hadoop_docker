@@ -7,10 +7,11 @@ COMMANDS=(
     "ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime"
     "dpkg-reconfigure --frontend noninteractive tzdata"
     "ntpdate -u ntp.aliyun.com"
+    "cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime"
 )
 
 # 复制 init_time.sh 到每个容器并执行命令
-for container in master_node slave_node1 slave_node2; do
+for container in masternode slavenode1 slavenode2; do
     # 复制 init_time.sh 到容器
     docker cp init_time.sh "$container:/root/"
 

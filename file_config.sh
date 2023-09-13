@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 定义容器名称和目标目录
-container_name="master_node"
+container_name="masternode"
 target_directory="/export/server/hadoop/etc/hadoop"
 
 # 检查容器是否正在运行
