@@ -1,25 +1,25 @@
 services:
-  master_node:
+  masternode:
     build: .
-    container_name: master_node
+    container_name: masternode
     networks:
       - hadoop_network
     command: ["tail", "-f", "/dev/null"]
     storage_opt:
       size: 500MB
 
-  slave_node1:
+  slavenode1:
     build: .
-    container_name: slave_node1
+    container_name: slavenode1
     networks:
       - hadoop_network
     command: ["tail", "-f", "/dev/null"]
     storage_opt:
       size: 500MB
 
-  slave_node2:
+  slavenode2:
     build: .
-    container_name: slave_node2
+    container_name: slavenode2
     networks:
       - hadoop_network
     command: ["tail", "-f", "/dev/null"]

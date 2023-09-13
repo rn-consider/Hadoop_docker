@@ -19,7 +19,7 @@
 <configuration>
 	<property>
 		<name>fs.defaultFS</name>
-		<value>hdfs://master_node:8020</value>
+		<value>hdfs://masternode:8020</value>
 	</property>
 	<property>
                 <name>io.file.buffer.size</name>

@@ -37,7 +37,7 @@
 
 		<name>dfs.namenode.hosts</name>
 
-		<value>node1,node2,node3</value>
+		<value>masternode,slavenode1,slavenode2</value>
 
 	</property>
 	<property>
