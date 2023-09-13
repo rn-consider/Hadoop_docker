@@ -1,0 +1,36 @@
+services:
+  master_node:
+    build: .
+    container_name: master_node
+    networks:
+      - hadoop_network
+    command: ["tail", "-f", "/dev/null"]
+    storage_opt:
+      size: 500MB
+
+  slave_node1:
+    build: .
+    container_name: slave_node1
+    networks:
+      - hadoop_network
+    command: ["tail", "-f", "/dev/null"]
+    storage_opt:
+      size: 500MB
+
+  slave_node2:
+    build: .
+    container_name: slave_node2
+    networks:
+      - hadoop_network
+    command: ["tail", "-f", "/dev/null"]
+    storage_opt:
+      size: 500MB
+
+networks:
+  hadoop_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.21.0.0/24
+
